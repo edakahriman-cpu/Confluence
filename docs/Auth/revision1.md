@@ -1,0 +1,2 @@
+Uygulamam için Stitch üzerinde adı Confluence app olan bir proje oluştur. Bu projenin içerisine ilk olarak bana 3 ekrana ihtiyacım var. Bunlar, Giriş yapmak, Kayıt olmak ve şifre girişinde şifremi unuttum özelliğini sağlamalı. Burada daha modern ve çalışan EX destekleyecek şekilde tasarla
+Bunları Stitch MCP üzerinden yapılmasını sağla. 

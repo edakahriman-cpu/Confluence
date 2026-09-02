@@ -1,0 +1,1 @@
+Stitch.MCP'ye git. Confluence app isimli projedeki Sign Up isimli tasarımı al. Confluence App uygulaması için login, signup, forget password sayfalarını geliştir. Backend servislerini bağla.

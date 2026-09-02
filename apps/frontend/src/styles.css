@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+	--ink: #20211f;
+	--muted: #70736b;
+	--paper: #f8f7f2;
+	--line: #dfe0d9;
+	--accent: #ef684d;
+	--accent-dark: #ce4d36;
+	font-family: 'DM Sans', sans-serif;
+	color: var(--ink);
+	background: var(--paper);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.auth-layout { min-height: 100dvh; display: grid; grid-template-columns: minmax(320px, 44%) 1fr; overflow: hidden; }
+.brand-panel { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: center; padding: clamp(2rem, 7vw, 7rem); background: #dce6d6; overflow: hidden; }
+.brand-panel::after { content: ''; position: absolute; z-index: -1; width: 75%; aspect-ratio: 1; right: -24%; bottom: -25%; border: 1px solid rgba(32,33,31,.16); border-radius: 50%; box-shadow: 0 0 0 56px rgba(32,33,31,.04), 0 0 0 112px rgba(32,33,31,.035); }
+.brand-mark { display: grid; place-items: center; width: 42px; height: 42px; margin-bottom: 4rem; color: #f8f7f2; background: var(--ink); border-radius: 50%; font: 700 1.25rem 'Space Grotesk'; }
+.brand-mark.small { width: 32px; height: 32px; margin: 0; font-size: 1rem; }
+.eyebrow { margin: 0 0 1.2rem; color: var(--muted); font-size: .7rem; font-weight: 700; letter-spacing: .16em; }
+.brand-panel .eyebrow { color: #5d6a59; }
+h1, h2 { font-family: 'Space Grotesk', sans-serif; letter-spacing: 0; }
+.brand-panel h1 { max-width: 520px; margin: 0; font-size: clamp(3rem, 6vw, 6.5rem); line-height: .93; }
+h1 em { color: var(--accent); font-style: normal; }
+.brand-copy { max-width: 330px; margin: 2rem 0 0; color: #596356; line-height: 1.6; }
+.orb { position: absolute; z-index: -1; border-radius: 50%; background: var(--accent); opacity: .9; }
+.orb-one { width: 16px; height: 16px; top: 23%; right: 18%; }
+.orb-two { width: 8px; height: 8px; top: 29%; right: 28%; background: #5b806a; }
+.form-panel { display: grid; place-items: center; padding: 3rem 1.5rem; background: var(--paper); }
+.form-wrap { width: min(100%, 390px); animation: appear .5s ease both; }
+.mobile-brand { display: none; color: var(--ink); font: 700 .75rem 'Space Grotesk'; letter-spacing: .15em; }
+.form-wrap h2 { margin: 0; font-size: 3rem; line-height: 1; }
+.subcopy { margin: 1rem 0 2.5rem; color: var(--muted); line-height: 1.55; }
+form { display: flex; flex-direction: column; }
+label { margin: 1.1rem 0 .5rem; font-size: .8rem; font-weight: 700; }
+label span { color: var(--muted); font-weight: 400; }
+input { width: 100%; padding: .95rem 1rem; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 2px; outline: 0; transition: border-color .2s, box-shadow .2s; }
+input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(239,104,77,.14); }
+.field-error, .form-error { display: block; margin-top: .45rem; color: #bb3f2d; font-size: .75rem; line-height: 1.4; }
+.forgot-link { align-self: flex-end; margin: .8rem 0 0; color: var(--muted); font-size: .8rem; }
+a { color: var(--accent-dark); font-weight: 600; text-underline-offset: 3px; }
+.primary-button, .secondary-button { cursor: pointer; border: 0; border-radius: 2px; font-weight: 700; transition: transform .2s, background .2s; }
+.primary-button { display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding: 1rem 1.2rem; color: white; background: var(--accent); }
+.primary-button:hover:not(:disabled) { background: var(--accent-dark); transform: translateY(-2px); }
+.primary-button:disabled { cursor: wait; opacity: .65; }
+.switch-copy { margin-top: 2.5rem; color: var(--muted); font-size: .82rem; text-align: center; }
+.success-box { padding: 1rem; border-left: 3px solid var(--accent); background: #f1ede3; line-height: 1.5; }
+.success-box p { color: var(--muted); font-size: .82rem; }
+.success-box code { display: block; max-height: 90px; overflow: auto; padding: .8rem; color: var(--ink); background: #fffdf8; font-size: .7rem; word-break: break-all; }
+.secondary-button { margin-top: .8rem; padding: .7rem 1rem; color: var(--ink); background: transparent; border: 1px solid var(--line); }
+.home-page { min-height: 100dvh; padding: 2rem clamp(1.5rem, 6vw, 6rem); background: var(--paper); }
+.home-page header { display: flex; align-items: center; gap: .8rem; }
+.home-page header .eyebrow { margin: 0; }
+.text-button { margin-left: auto; padding: .5rem 0; color: var(--accent-dark); background: transparent; border: 0; cursor: pointer; font-weight: 700; }
+.home-content { max-width: 720px; margin: 18vh auto 0; }
+.home-content h1 { margin: 0; font-size: clamp(2.5rem, 6vw, 5rem); }
+.home-content p:last-child { color: var(--muted); font-size: 1.1rem; }
+@keyframes appear { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 700px) { .auth-layout { display: block; } .brand-panel { min-height: 260px; padding: 1.5rem; } .brand-mark { margin-bottom: 2rem; } .brand-panel h1 { font-size: 3rem; } .brand-copy { display: none; } .form-panel { min-height: calc(100dvh - 260px); padding: 2.5rem 1.5rem; } .mobile-brand { display: block; } .form-wrap h2 { font-size: 2.5rem; } }
