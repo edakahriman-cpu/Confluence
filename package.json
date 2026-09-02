@@ -1,0 +1,21 @@
+{
+  "name": "confluence-app",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:backend": "npm run start:dev --workspace=apps/backend",
+    "dev:frontend": "npm run start --workspace=apps/frontend"
+  },
+  "allowScripts": {
+    "prisma@7.10.0": true,
+    "@parcel/watcher@2.6.0": true,
+    "@prisma/engines@7.10.0": true,
+    "better-sqlite3@12.11.1": true,
+    "esbuild@0.28.2": true,
+    "lmdb@3.5.6": true,
+    "msgpackr-extract@3.0.4": true
+  }
+}
